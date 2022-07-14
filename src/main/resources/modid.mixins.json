@@ -4,8 +4,12 @@
   "package": "cn.thiamine128.swordsprite.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "EntityTrackEntryMixin"
   ],
   "client": [
+
+  ],
+  "server": [
 
   ],
   "injectors": {

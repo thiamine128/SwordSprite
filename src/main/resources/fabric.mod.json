@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "cn.thiamine128.swordsprite.SwordSpriteMod"
+    ],
+    "client": [
+      "cn.thiamine128.swordsprite.client.SwordSpriteClient"
     ]
   },
   "mixins": [
