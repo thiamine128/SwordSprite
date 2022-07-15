@@ -18,7 +18,7 @@ public class EntityTrackEntryMixin {
 
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;hasVehicle()Z"))
     private boolean checkCondition(Entity instance) {
-        return instance.hasVehicle() || instance instanceof SwordEntity;
+        return instance.hasVehicle() || (instance instanceof SwordEntity);
     }
 
     @Redirect(method = "tick", at = @At(value = "FIELD", target = "Lnet/minecraft/server/network/EntityTrackerEntry;hadVehicle:Z", opcode = Opcodes.PUTFIELD, ordinal = 0))

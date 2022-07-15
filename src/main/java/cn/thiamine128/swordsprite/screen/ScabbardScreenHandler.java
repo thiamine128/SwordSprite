@@ -1,27 +1,25 @@
 package cn.thiamine128.swordsprite.screen;
 
-import cn.thiamine128.swordsprite.items.SwordSpriteItem;
+import cn.thiamine128.swordsprite.item.ScabbardItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.screen.slot.SlotActionType;
-import org.jetbrains.annotations.Nullable;
 
-public class SwordSpriteScreenHandler extends ScreenHandler {
+public class ScabbardScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private static final int INVENTORY_SIZE = 1;
 
-    public SwordSpriteScreenHandler(int syncId, PlayerInventory playerInventory) {
+    public ScabbardScreenHandler(int syncId, PlayerInventory playerInventory) {
         this(syncId, playerInventory, new SimpleInventory(INVENTORY_SIZE));
     }
 
-    public SwordSpriteScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
-        super(ModScreenHandlers.SWORD_SPRITE_SCREEN_HANDLER, syncId);
+    public ScabbardScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
+        super(ModScreenHandlers.SCABBARD_SCREEN_HANDLER, syncId);
         this.inventory = inventory;
         checkSize(inventory, INVENTORY_SIZE);
         inventory.onOpen(playerInventory.player);
@@ -77,7 +75,7 @@ public class SwordSpriteScreenHandler extends ScreenHandler {
         if (slotIndex >= 0) {
             ItemStack itemStack = getSlot(slotIndex).getStack();
 
-            if (itemStack.getItem() instanceof SwordSpriteItem) {
+            if (itemStack.getItem() instanceof ScabbardItem) {
                 return;
             }
         }

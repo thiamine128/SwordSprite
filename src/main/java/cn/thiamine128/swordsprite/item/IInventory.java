@@ -1,4 +1,4 @@
-package cn.thiamine128.swordsprite.items;
+package cn.thiamine128.swordsprite.item;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;

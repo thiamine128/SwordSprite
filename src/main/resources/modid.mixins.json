@@ -7,7 +7,7 @@
     "EntityTrackEntryMixin"
   ],
   "client": [
-
+    "ClientPlayerEntityMixin"
   ],
   "server": [
 

@@ -1,4 +1,4 @@
-package cn.thiamine128.swordsprite.items;
+package cn.thiamine128.swordsprite.item;
 
 import cn.thiamine128.swordsprite.SwordSpriteMod;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -15,11 +15,11 @@ public class ModItems {
             () -> new ItemStack(Items.DIAMOND_SWORD)
     );
 
-    public static final SwordSpriteItem SWORD_SPRITE = new SwordSpriteItem(
+    public static final ScabbardItem SCABBARD = new ScabbardItem(
             new FabricItemSettings().group(ITEM_GROUP)
     );
 
     public static void register() {
-        Registry.register(Registry.ITEM, SwordSpriteMod.identify("sword_sprite"), SWORD_SPRITE);
+        Registry.register(Registry.ITEM, SwordSpriteMod.identify("scabbard"), SCABBARD);
     }
 }

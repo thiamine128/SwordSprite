@@ -1,7 +1,7 @@
 package cn.thiamine128.swordsprite.client.gui.screen.ingame;
 
 import cn.thiamine128.swordsprite.SwordSpriteMod;
-import cn.thiamine128.swordsprite.screen.SwordSpriteScreenHandler;
+import cn.thiamine128.swordsprite.screen.ScabbardScreenHandler;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
@@ -10,10 +10,10 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class SwordSpriteScreen extends HandledScreen<SwordSpriteScreenHandler> {
+public class SwordSpriteScreen extends HandledScreen<ScabbardScreenHandler> {
     private static final Identifier TEXTURE = SwordSpriteMod.identify("textures/gui/container/sword_sprite.png");
 
-    public SwordSpriteScreen(SwordSpriteScreenHandler handler, PlayerInventory inventory, Text title) {
+    public SwordSpriteScreen(ScabbardScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
         this.passEvents = false;
         this.backgroundHeight = 133;
